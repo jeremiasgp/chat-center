@@ -2,6 +2,9 @@ import React from 'react';
 import './_user-profile.scss';
 
 function getInitials(string) {
+  if (!string) {
+    return '';
+  }
   return string.match(/\b(\w)/g).slice(0, 2).join('').toUpperCase();
 }
 
